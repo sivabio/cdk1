@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML Possiblity for Chronic Kidney Disease API</title>
+<!--  <link rel="style"href="style.css">-->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<!--    <link rel="stylesheet" href="styles.css">-->
+</head>
+
+<body>
+ <div class="login">
+	<h1>Possiblity for Chronic Kidney Disease Prediction</h1>
+    <!-- Possiblity for Chronic Kidney Disease -->
+     <p>Kindly provide details of your report as per the requirement format mentioned as example. 1 or 0 indicates 1 - present 0- absent state</p>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <table>
+      <tr><td>Age (example - 25) : </td><td> <input type="text" name="a" placeholder="Age" required="required" /><br><br></td></tr>
+      <tr><td>Blood Pressure (example - 80) : </td><td><input type="text" name="b" placeholder="Blood Pressure" required="required" /> <br><br></td></tr>
+      <tr><td>Specfic Gravity of Urine (example - 1.020) : </td><td><input type="text" name="c" placeholder="Specfic Gravity of Urine" required="required" /> <br><br></td></tr>
+      <tr><td>Albumin in Urine (example - 2) : </td><td><input type="text" name="d" placeholder="Albumin in Urine" required="required" /> <br><br></td></tr>
+      <tr><td>Sugar in Urine (example - 3) : </td><td><input type="text" name="e" placeholder="Sugar in Urine" required="required" /> <br><br></td></tr>
+      <tr><td>Red blood cells in Urine (example - 1 or 0) : </td><td><input type="text" name="f" placeholder="Red blood cells in Urine" required="required" /> <br><br></td></tr>
+      <tr><td>Pus cells in Urine (example - 1 or 0) : </td><td><input type="text" name="g" placeholder="Pus cells in Urine" required="required" /> <br><br></td></tr>
+      <tr><td>Pus cells clumps in Urine (example - 1 or 0) : </td><td><input type="text" name="h" placeholder="Pus cells clumps in Urine" required="required" /> <br><br></td></tr>
+      <tr><td>Bacteria in Urine (example - 1 or 0) : </td><td><input type="text" name="i" placeholder="Bacteria in Urine" required="required" /> <br><br></td></tr>
+      <tr><td>Random Blood glucose (example - 125) : </td><td><input type="text" name="j" placeholder="Random Blood glucose" required="required" /> <br><br></td></tr>
+      <tr><td>Blood Urea (example - 36) : </td><td><input type="text" name="k" placeholder="Blood Urea" required="required" /> <br><br></td></tr>
+      <tr><td>Serum Creatinine (example - 1.2) : </td><td><input type="text" name="l" placeholder="Serum Creatinine" required="required" /> <br><br></td></tr>
+      <tr><td>Blood Sodium (example - 137) : </td><td><input type="text" name="m" placeholder="Blood Sodium" required="required" /> <br><br></td></tr>
+      <tr><td>Blood Potassium (example - 4.62) : </td><td><input type="text" name="n" placeholder="Blood Potassium" required="required" /> <br><br></td></tr>
+      <tr><td>Haemoglobin (example - 15.4) : </td><td><input type="text" name="o" placeholder="Haemoglobin" required="required" /> <br><br></td></tr>
+      <tr><td>Packed cell volume (PCV) (example - 44) : </td><td><input type="text" name="p" placeholder="Packed cell volume (PCV)" required="required" /> <br><br></td></tr>
+      <tr><td>WBC count (TC) (example - 7800) : </td><td><input type="text" name="q" placeholder="WBC count (TC)" required="required" /> <br><br></td></tr>
+      <tr><td>RBC count (example - 5.2) : </td><td><input type="text" name="r" placeholder="RBC count" required="required" /> <br><br></td></tr>
+      <tr><td>Hypertension (example - 1 or 0) : </td><td><input type="text" name="s" placeholder="Hypertension" required="required" /> <br><br></td></tr>
+      <tr><td>Diabetes Mellitus (example - 1 or 0) : </td><td><input type="text" name="t" placeholder="Diabetes Mellitus" required="required" /> <br><br></td></tr>
+      <tr><td>Coronary artery disease (example - 1 or 0) : </td><td><input type="text" name="u" placeholder="Coronary artery disease" required="required" /> <br><br></td></tr>
+      <tr><td>Appetite (example - 1 or 0) : </td><td><input type="text" name="v" placeholder="Appetite" required="required" /> <br><br></td></tr>
+      <tr><td>Peda oedema (example - 1 or 0) : </td><td><input type="text" name="w" placeholder="Peda oedema" required="required" /> <br><br></td></tr>
+      <tr><td>Anemia (example - 1 or 0) : </td><td><input type="text" name="x" placeholder="Anemia" required="required" /> <br><br></td></tr>
+      <tr><td>* 1 or 0 indicates 1 - present 0- absent <br><br></td></tr>
+    </table>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+     <br>
+   <br>
+   </div>
+
+
+</body>
+</html>

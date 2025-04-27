@@ -1,0 +1,34 @@
+<html>
+
+<body bgcolor=#a3cfb4>
+
+    <center>
+
+        <h1>  PREDICTION  </h1>
+    
+    {%if data == 1%}
+    <h1>Possiblity for Chronic Kidney Disease : yes CDK {{  data }} </h1>
+  
+    {%elif data == 0%}
+    <h1>Possiblity for Chronic Kidney Disease : no CDK {{ data }} </h1>
+  
+    {%else%}
+    <h1>Not Predicted</h1>
+    <img src='static\verci.jpg'>
+    
+    {%endif%}
+
+        <br><br>
+    <a href='/'>Go back to Home Prediction Page</a>
+
+    </center>
+
+</body>
+
+</html>
+
+
+
+
+
+
